@@ -6,7 +6,7 @@
 <struts>
 
     <package name="config"  namespace="/" extends="struts-default" abstract="false">
-    	<action name="login" class="keda.bs.user.UserAction" method="login">
+    	<action name="user_*" class="keda.bs.user.UserAction" method="{1}">
     		<result name="success">/index.jsp</result>
     	</action>
     </package>
