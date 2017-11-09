@@ -5,7 +5,7 @@
 
 <struts>
 	<!-- 通配符 -->
-    <package name="config"  namespace="/" extends="struts-default" abstract="false">
+    <package name="config"  namespace="/user" extends="struts-default" abstract="false">
     	<action name="user_*" class="keda.bs.user.UserAction" method="{1}">
     		<result name="success">/WEB-INF/jsp/index.jsp</result>
     	</action>
