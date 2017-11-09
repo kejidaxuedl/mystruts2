@@ -4,7 +4,7 @@
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 
 <struts>
-	<constant name="struts.action.extension" value="kedabs"></constant>
 	<!-- 总配置 -->
 	<include file="keda/bs/user/struts.xml"></include>
+	<include file="constant.xml"></include>
 </struts>
