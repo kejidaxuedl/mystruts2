@@ -16,6 +16,7 @@ public class UserAction extends ActionSupport {
 	//×¢²á·½·¨
 	public String register() {
 		System.out.println(user.getBirth());
+		System.out.println(user.getName());
 		return SUCCESS;
 	}
 }
