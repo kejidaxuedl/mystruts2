@@ -8,4 +8,5 @@
 	<include file="keda/bs/user/struts.xml"></include>
 	<include file="keda/bs/data/data.xml"></include>
 	<include file="constant.xml"></include>
+	<include file="keda/bs/fileupload/upload.xml"></include>
 </struts>
