@@ -6,5 +6,6 @@
 <struts>
 	<!-- 总配置 -->
 	<include file="keda/bs/user/struts.xml"></include>
+	<include file="keda/bs/data/data.xml"></include>
 	<include file="constant.xml"></include>
 </struts>

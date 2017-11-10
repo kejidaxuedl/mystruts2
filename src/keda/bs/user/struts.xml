@@ -12,6 +12,8 @@
     	<result name="success">/WEB-INF/jsp/index.jsp</result>
     </global-results>
     	<action name="user_*" class="keda.bs.user.UserAction" method="{1}">	</action>
+    	<!-- 默认执行的class是struts-default里面的ActionSupport  最简短的action-->
+    	<action name="text"></action>
     </package>
      
 </struts>
