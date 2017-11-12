@@ -164,12 +164,12 @@
 						method="post" enctype="multipart/form-data" class="subscribe-form">
 						<h3>file upload</h3>
 						<div class="message">
-							<input type="text" id="txt" name="txt" class="input" value="file address"
+							<!-- <input type="text" id="txt" name="txt" class="input" value="file address"
 								disabled="disabled" /> <input type="button"
 								onMouseMove="f.style.pixelLeft=event.x-60;f.style.pixelTop=this.offsetTop;"
-								value="upload" size="30" onClick="f.click()" class="liulan">
-							<input type="file" id="f" onChange="txt.value=this.value"
-								name="f" style="height: 26px;" class="files" size="1" hidefocus name = "file1">
+								value="upload" size="30" onClick="f.click()" class="liulan"> -->
+							<input type="file" name = "file1">
+							<input type="submit" value="提交"/>
 						</div>
 						<p class="small">please check your address!</p>
 					</form>
