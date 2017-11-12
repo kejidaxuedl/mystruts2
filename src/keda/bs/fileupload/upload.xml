@@ -6,9 +6,22 @@
 <struts>
 	
 	<!-- 通配符 -->
-    <package name="upload"  namespace="/" extends="struts-default" abstract="false">
-    	<action name="uploadAction" class="keda.bs.fileupload.FileUpload">	
-    		<result name="success">/upload/success.jsp</result>
+    <package name ="upload"  namespace="/" extends="struts-default" abstract="false">
+    	<action name ="uploadAction" class="keda.bs.fileupload.FileUpload">	
+    		<interceptor-ref name="defaultStack">
+    			<param name="fileUpload.allowedExtensions">txt,jpg,jpeg,zip,avi,mp3,mp4,exe</param>
+    		</interceptor-ref>
+    		<result name ="success">/upload/success.jsp</result>
+    		<result name = "input" >/error/nosupportfile.jsp</result>
+    	</action>
+    	<action name="down_*" class="keda.bs.fileupload.DownLoadFile" method="{1}">
+    		<result name="{1}">/upload/listfile.jsp</result>
+    		<result name="download"  type="stream">
+    			<param name="inputName">inputStream</param>
+    			<param name="contentType">application/octet-stream</param>
+    			<param name="contentDisposition">attachment;filename="${downFileName}"</param>
+    			<param name="buffersize">1024</param>
+    		</result>
     	</action>
     </package>
      

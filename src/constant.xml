@@ -8,5 +8,6 @@
 	<constant name="struts.action.extension" value="kedabs"></constant>
 	<constant name="struts.configuration.xml.reload" value="true"></constant>
 	<constant name="struts.enable.DynamicMethodInvocation " value="true"></constant>
+	<constant name="struts.multipart.maxSize" value="19000000000000"></constant>
 	<!-- <constant name="struts.multipart.saveDir" value="/tmp"></constant> -->
 </struts>
