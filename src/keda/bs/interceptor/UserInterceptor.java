@@ -22,6 +22,7 @@ public class UserInterceptor extends AbstractInterceptor{
 			Object obj = ac.getSession().get("userInfo");
 			if(obj == null){
 				//Ã»ÓÐµÇÂ½
+				ActionContext.getContext().getContextMap().put("message", "ÇëÏÈµÇÂ½");
 				return "input";
 			}else{
 				return invocation.invoke();
