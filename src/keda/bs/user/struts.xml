@@ -4,16 +4,38 @@
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 
 <struts>
-	
+
 	<!-- 通配符 -->
-    <package name="config"  namespace="/user" extends="struts-default" abstract="false">
-    <!-- 跳转视图 -->
-    <global-results>
-    	<result name="success">/WEB-INF/jsp/index.jsp</result>
-    </global-results>
-    	<action name="user_*" class="keda.bs.user.UserAction" method="{1}">	</action>
-    	<!-- 默认执行的class是struts-default里面的ActionSupport  最简短的action-->
-    	<action name="text"></action>
-    </package>
-     
+	<package name="user" namespace="/user" extends="struts-default"
+		abstract="false">
+		<!-- 拦截器配置 -->
+		<interceptors>
+			<interceptor name="loginCheck" class="keda.bs.interceptor.UserInterceptor"></interceptor>
+			<interceptor-stack name="myStack">
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+				<interceptor-ref name="loginCheck"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		
+		<!-- 执行拦截器 -->
+		<default-interceptor-ref name="myStack"></default-interceptor-ref>
+		
+		<!-- 跳转视图 -->
+		<global-results> 
+			<result name="error">/error.jsp</result> 
+		</global-results>
+		<action name="user_*" class="keda.bs.user.UserAction" method="{1}">
+			<!-- 	登录失败 -->
+			<result name="input">/login.jsp</result>
+			
+			<!-- 登陆成功 -->
+			<result name="loginSuccess" type="redirectAction">user_list</result>
+			
+			<!-- 列表展示 -->
+			<result name= "list">/WEB-INF/jsp/indexlist.jsp</result>
+		</action>
+		<!-- 默认执行的class是struts-default里面的ActionSupport 最简短的action -->
+		<action name="text"></action>
+	</package>
+
 </struts>

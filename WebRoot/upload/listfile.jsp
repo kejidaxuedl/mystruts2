@@ -14,8 +14,8 @@
 			<td>文件名</td>
 			<td>操作</td>
 		</tr>
-		<%@taglib uri = "http://java.sun.com/jsp/jstl/core" prefix="c"%>
-		<c:forEach var = "fileName" items="${list }" varStatus="vs">
+		<%@taglib uri = "http://java.sun.com/jsp/jstl/core" prefix="d"%>
+		<d:forEach var = "fileName" items="${list }" varStatus="vs">
 			<tr>
 				<td>${vs.count }</td>
 				<td>${fileName }</td>

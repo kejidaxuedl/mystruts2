@@ -3,15 +3,22 @@ package keda.bs.bean;
 import java.util.Date;
 
 public class User {
-	private String name;
+	private int id;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	private String userName;
 	private String pwd;
 	private int age;
 	private Date birth;
-	public String getName() {
-		return name;
+	public String getUserName() {
+		return userName;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setUserName(String name) {
+		this.userName = name;
 	}
 	public String getPwd() {
 		return pwd;
