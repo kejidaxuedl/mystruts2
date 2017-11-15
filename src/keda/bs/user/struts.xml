@@ -4,7 +4,6 @@
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 
 <struts>
-
 	<!-- 通配符 -->
 	<package name="user" namespace="/user" extends="struts-default"
 		abstract="false">

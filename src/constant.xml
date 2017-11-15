@@ -5,6 +5,7 @@
 
 <struts>
 	<!-- 常量 -->
+	<constant name="struts.custom.i18n.resources" value="msg"></constant>
 	<constant name="struts.action.extension" value="kedabs"></constant>
 	<constant name="struts.configuration.xml.reload" value="true"></constant>
 	<constant name="struts.enable.DynamicMethodInvocation " value="true"></constant>

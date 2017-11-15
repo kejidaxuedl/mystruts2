@@ -168,7 +168,7 @@
 								disabled="disabled" /> <input type="button"
 								onMouseMove="f.style.pixelLeft=event.x-60;f.style.pixelTop=this.offsetTop;"
 								value="upload" size="30" onClick="f.click()" class="liulan"> -->
-							<input type="file" name = "file1">
+							<input type="file"  name = "file1"/>
 							<input type="submit" value="提交"/>
 						</div>
 						<p class="small">please check your address!</p>
